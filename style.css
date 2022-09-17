@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #161616;
+    color: #fff;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+::cue {
+    font: normal 16px/16px 'Inter', system-ui, sans-serif;
+}
+
+.mdc-icon {
+    font-family: 'Material Symbols Outlined';
+    font-feature-settings: 'liga';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    color: #fff;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: .875rem;
+}
+
+header .filled-btn {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    letter-spacing: .0592857143em;
+    text-transform: uppercase;
+    background: #00ac13;
+    color: #fff;
+    border: 1px solid #00ac13;
+    border-radius: .25rem;
+    height: 2.25rem;
+    min-width: 7rem;
+}
+
+main {
+    display: flex;
+    gap: .25rem;
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 56%;
+    max-width: 56%;
+    width: 100%;
+    border-radius: .25rem;
+}
+
+.video-container video {
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.slide-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 44%;
+    max-width: 44%;
+    width: 100%;
+    border-radius: .25rem;
+}
+
+.slide-container figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-container img {
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: .25rem .5rem;
+}
+
+.progress-container .icons {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.progress-container .icons .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-variation-settings: 'wght' 250;
+}
+
+.progress-container .icons:first-of-type .icon-btn .mdc-icon {
+    font-variation-settings: 'FILL' 1;
+}
+
+.playing .progress-container .icons:first-of-type .icon-btn:first-of-type .mdc-icon {
+    font-variation-settings: 'FILL' 0;
+}
+
+.progress-container .progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: auto;
+    width: 100%;
+}
+
+.progress-container .progress input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: .25rem;
+    margin: 0 .5rem;
+    background: rgba(255,255,255,0.75);
+    border-radius: .25rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress-container .progress input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 0;
+    height: .25rem;
+    cursor: pointer;
+    box-shadow: -800px 0 0 800px #00749F;
+}
+
+.progress-container .progress p {
+    font-size: .875rem;
+    text-align: center;
+}

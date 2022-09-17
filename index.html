@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publisher</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#"><i class="mdc-icon">arrow_back</i> Arena Edge Demonstration</a>
+        <button class="filled-btn">Publish</button>
+    </header>
+    <main>
+        <section class="video-container">
+            <video poster="images/poster.webp" preload="metadata">
+                <source src="video.mp4" type="video/mp4">
+                <track src="captions.vtt" label="Subtitles" kind="subtitles" srclang="en" default></track>
+            </video>
+        </section>
+        <section class="slide-container">
+            <figure id="figure">
+                <img src="images/slide_1.webp" alt="Slide 1">
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <section class="progress-container">
+            <div class="icons">
+                <button class="icon-btn" id="play-btn"><i class="mdc-icon">play_arrow</i></button>
+                <button class="icon-btn" id="volume-btn"><i class="mdc-icon">volume_up</i></button>
+            </div>
+            <div class="progress">
+                <p id="timer"></p>
+                <input type="range" id="progress-bar" min="0" max="100" step="0.1" value="0">
+                <p id="duration"></p>
+            </div>
+            <div class="icons">
+                <button class="icon-btn" id="subtitles-btn"><i class="mdc-icon">closed_caption_off</i></button>
+                <button class="icon-btn" id="settings-btn"><i class="mdc-icon">settings</i></button>
+                <button class="icon-btn" id="fullscreen-btn"><i class="mdc-icon">fullscreen</i></button>
+            </div>
+        </section>
+        <section class="timeline-container"></section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
